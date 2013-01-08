@@ -5,7 +5,8 @@ gem 'vcr'
 gem 'rspec'
 gem 'webmock'
 
-gem 'faraday'
+gem "faraday", "~> 0.8.2"
+#gem 'faraday'
 gem 'faraday-stack'
 
 group :deveopement do
