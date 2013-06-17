@@ -7,7 +7,7 @@ gem 'webmock'
 
 gem "faraday", "~> 0.8.2"
 #gem 'faraday'
-gem 'faraday-stack'
+gem 'faraday_middleware'
 
 group :deveopement do
 	gem "settingslogic"

@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 require 'faraday'
-require 'faraday_stack'
+require 'faraday_middleware'
 require 'json'
 
 module Grizzly
@@ -13,10 +13,12 @@ module Grizzly
     TIMEOUT = 5
     OPEN_TIMEOUT = 2
 
-    def initialize(method, url, options, payload = nil) 
+    def initialize(method, url, options, payload = nil)
       connection = Faraday.new(:url => BASE_URI) do |builder|
         builder.use Faraday::Adapter::NetHttp
-        builder.use FaradayStack::ResponseJSON, content_type: 'application/json'
+        #builder.request :json
+        #builder.use FaradayStack::ResponseJSON, content_type: 'application/json'
+        builder.response :json, content_type: 'application/json'
         builder.use Faraday::Request::UrlEncoded
       end
 
