@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "faraday", "~> 0.8.0"
   s.add_runtime_dependency "faraday_middleware", "0.9.0"
-  s.add_runtime_dependency "faraday-stack", "~> 0.1.5"
+
  
   s.files        = Dir.glob("lib/**/*") + %w(LICENSE README.markdown)
   s.require_path = 'lib'
